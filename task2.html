@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Navigation</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background:#222;
+            padding:15px 40px;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo:active{
+            color:white;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        .logo:visited{
+            color: purple;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:30px;
+            margin:0;
+            padding:0;
+        }
+
+        .nav-links li{
+            position:relative;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:white;
+            font-size:16px;
+            padding:5px 0;
+        }
+
+        .nav-links a::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:-5px;
+            width:0%;
+            height:2px;
+            background:#00bcd4;
+            transition:width 0.3s ease;
+        }
+
+        .nav-links a:hover::after{
+            width:100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="task1.html">MyLogo</a></div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>

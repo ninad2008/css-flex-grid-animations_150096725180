@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Table</title>
+
+    <style>
+
+        body{
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        .pricing{
+            padding:60px 10%;
+            text-align:center;
+        }
+
+        .pricing h1{
+            margin-bottom:40px;
+        }
+
+        .pricing-container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .price-card{
+            background:white;
+            border-radius:15px;
+            padding:30px;
+            width:280px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+            transition:transform 0.3s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .price-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .price{
+            font-size:36px;
+            margin:20px 0;
+            font-weight:bold;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+            margin:20px 0;
+        }
+
+        ul li{
+            margin:10px 0;
+        }
+
+        button{
+            padding:12px 25px;
+            border:none;
+            border-radius:25px;
+            background:#4facfe;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#00c6ff;
+        }
+
+        .popular{
+            transform:scale(1.1);
+            color:white;
+        }
+
+        .popular button{
+            background:white;
+            color:#333;
+        }
+
+        .popular::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:linear-gradient(270deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
+            background-size:600% 600%;
+            animation:gradientMove 8s ease infinite;
+            z-index:-1;
+        }
+
+        @keyframes gradientMove{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section class="pricing">
+
+        <h1>Our Pricing Plans</h1>
+
+        <div class="pricing-container">
+
+            <div class="price-card">
+                <h2>Basic</h2>
+                <div class="price">$10/mo</div>
+                <ul>
+                    <li>1 Website</li>
+                    <li>Basic Support</li>
+                    <li>10GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-card popular">
+                <h2>Pro</h2>
+                <div class="price">$25/mo</div>
+                <ul>
+                    <li>5 Websites</li>
+                    <li>Priority Support</li>
+                    <li>50GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-card">
+                <h2>Premium</h2>
+                <div class="price">$50/mo</div>
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>24/7 Support</li>
+                    <li>150GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

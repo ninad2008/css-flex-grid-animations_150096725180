@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Section</title>
+
+    <style>
+
+        body{
+            margin:0;
+        }
+
+        .hero{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:60px 10%;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            min-height:100vh;
+            color:white;
+        }
+
+        .text{
+            max-width:500px;
+            animation:slideInLeft 1.2s ease forwards;
+            opacity:0;
+        }
+
+        .text h1{
+            font-size:48px;
+            margin-bottom:20px;
+        }
+
+        .text p{
+            font-size:18px;
+            margin-bottom:30px;
+            line-height:1.5;
+        }
+
+        .btn{
+            padding:15px 30px;
+            border:none;
+            border-radius:30px;
+            background:#ffeb3b;
+            color:black;
+            font-size:16px;
+            cursor:pointer;
+            animation:pulse 1.5s infinite;
+            transition:transform 0.3s;
+        }
+
+        .btn:hover{
+            transform:scale(1.1);
+        }
+
+        .image{
+            animation:slideInRight 1.2s ease forwards;
+            opacity:0;
+        }
+
+        .image img{
+            width:450px;
+            max-width:100%;
+        }
+
+        @keyframes slideInLeft{
+            from{
+                transform:translateX(-100px);
+                opacity:0;
+            }
+            to{
+                transform:translateX(0);
+                opacity:1;
+            }
+        }
+
+        @keyframes slideInRight{
+            from{
+                transform:translateX(100px);
+                opacity:0;
+            }
+            to{
+                transform:translateX(0);
+                opacity:1;
+            }
+        }
+
+        @keyframes pulse{
+            0%{
+                box-shadow:0 0 0 0 rgba(255,235,59,0.7);
+            }
+            70%{
+                box-shadow:0 0 0 20px rgba(255,235,59,0);
+            }
+            100%{
+                box-shadow:0 0 0 0 rgba(255,235,59,0);
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <section class="hero">
+
+        <div class="text">
+            <h1>Build Amazing Websites</h1>
+            <p>
+                Learn modern web design using Flexbox, Grid, and animations.
+                Create responsive and beautiful layouts easily.
+            </p>
+            <button class="btn">Get Started</button>
+        </div>
+
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbzf_WZYRJ55EOW3v_7lgJ5NtT5PT2w3n6UA&s">
+        </div>
+
+    </section>
+
+</body>
+</html>
